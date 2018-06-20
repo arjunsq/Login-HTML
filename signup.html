@@ -10,6 +10,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="script.js"></script>  
+
+<style type="text/css">
+	p{
+    color: red;
+  }
+</style>
+
 </head>
 
 
@@ -22,7 +29,7 @@
     </div>
   <div class="col-sm-9">
   <h1>CARS & BIKES</h1>
-  <p>Encyclopedia of Cars and Bikes.</p> 
+  <h3>Encyclopedia of Cars and Bikes.</h3> 
   </div>
 </div>
 </div>
@@ -36,18 +43,27 @@
     <div class="col-sm-4">
           <div class="form-group">
             <form name = "signup" action="http://demo6835492.mockable.io/sendEmail" onsubmit="return validatesignup()" method="POST" >
+            
+
+
             <label for="usr">Name:</label>
-            <input type="text" name="name" placeholder= "Enter name" class="form-control" id="usr" minlength="1" maxlength="20" required><br>
-            <p id="vname"></p>
+            <input type="text" name="name" placeholder="Enter name" class="form-control" id="name" ><br>
+            <p id="vname" ></p>
 
             <label for="email">Email:</label>
-            <input type="email" placeholder= "Enter email" class="form-control" id="email" required><br>
+            <input type="text" placeholder= "Enter email" class="form-control" id="email"><br>
+            <p id="vmail" ></p>
 
             <label for="pwd">Password:</label>
-            <input type="password" placeholder= "Enter password" class="form-control" id="pwd" minlength="6" maxlength="15" required><br>
+            <input type="password" placeholder= "Enter password" class="form-control" id="password"><br>
+            <p id="vpass" ></p>
 
             <br>
+
             <button type="submit" class="btn btn-success btn-block">Sign Up</button>
+
+
+            
             </form>
           </div>  
     </div>
@@ -57,25 +73,6 @@
 
   </div>
 </div>
-<!--
-<script>
-
-function validatesignup()
-{
-  //name check
-  document.getElementById("vname").innerHTML="";
-  var letters = /^[A-Za-z]+$/;
-  if(document.forms["signup"]["name"].value.match(letters))
-  {
-    return true;
-  }
-  else
-  {
-    document.getElementById("vname").innerHTML='Please input alphabet characters only';
-    return false;
-  }
-}
-</script>  -->
 </body>
 </html>
 
